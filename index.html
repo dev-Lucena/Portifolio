@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victor Lucena | Desenvolvedor Front-end Júnior</title>
+<meta name="description" content="Victor Lucena, desenvolvedor front-end júnior e ex-professor com 12 anos de sala de aula. 11 projetos em HTML, CSS, JavaScript, IA e back-end com Node.js, publicados na web.">
+<meta name="theme-color" content="#fbfcfe">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Victor Lucena | Desenvolvedor Front-end Júnior">
+<meta property="og:description" content="Ex-professor, agora desenvolvedor front-end júnior. Veja meus projetos publicados e o código no GitHub.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2313203a'/%3E%3Ctext x='32' y='45' font-size='36' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23ffe066'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbfcfe;--ink:#13203a;--muted:#4b5a75;--line:#d9e3f2;--rule:rgba(19,32,58,.14);--red:#d6403f;--hl:#ffe066;--link:#1f5fd1;--head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 1.0625rem/1.65 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink)}
+::selection{background:var(--hl)}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--link);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;z-index:20}
+.skip:focus{left:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:800}
+header{position:sticky;top:0;z-index:10;background:rgba(251,252,254,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font:800 1.2rem var(--head);color:var(--ink);text-decoration:none}
+.brand span{color:var(--red)}
+.site-nav ul{display:flex;gap:28px;list-style:none}
+.site-nav a{color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:500}
+.site-nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:6px}
+.menu-btn{display:none;background:none;border:1px solid var(--rule);border-radius:8px;padding:8px 14px;font-family:inherit;font-weight:600;font-size:.9rem;color:var(--ink);cursor:pointer}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:#fff;transition:background .15s,color .15s}
+.btn:hover{background:#fff;color:var(--ink)}
+.btn.alt{background:transparent;color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:#fff}
+section{padding:clamp(56px,8vw,96px) 0;border-top:1px solid var(--rule)}
+.hero{position:relative;overflow:hidden;border-top:0;padding:clamp(56px,9vw,110px) 0 clamp(48px,7vw,88px)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/32px 32px;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.hero::after{content:"";position:absolute;top:0;bottom:0;left:max(10px,calc(50% - 558px));width:2px;background:rgba(214,64,63,.55)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:start}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;padding:6px 14px;border:1px solid var(--rule);border-radius:999px;background:#fff}
+.avail::before{content:"";width:8px;height:8px;border-radius:50%;background:#2e9e5b}
+h1{font-size:clamp(2.2rem,5.2vw,3.7rem);font-weight:800;margin:22px 0 20px}
+.lead{max-width:56ch;color:var(--muted);font-size:1.125rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{background:#fff;border:1px solid var(--rule);padding:8px 24px}
+.facts div{padding:16px 0;border-bottom:1px solid var(--line)}
+.facts div:last-child{border-bottom:0}
+.facts dt{font-weight:700;font-size:.95rem}
+.facts dd{color:var(--muted);font-size:.98rem}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px}
+.prose p{max-width:62ch}
+.prose p+p{margin-top:1.1em}
+.sub{color:var(--muted);margin-top:10px;max-width:46ch}
+.works{margin-top:36px}
+.work{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px 48px;padding:36px 0;border-top:1px solid var(--rule)}
+.work h3{font-size:1.5rem;font-weight:700}
+.work p{color:var(--muted);margin-top:10px;max-width:58ch}
+.work .learn{color:var(--ink);margin-top:0}
+.pronto{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:6px 14px;border:1px solid var(--rule);border-radius:999px;background:#fff;font-size:.9rem;font-weight:600;color:var(--ink)}
+.pronto::before{content:"";width:8px;height:8px;border-radius:50%;background:#2e9e5b}
+.stack{font-size:.92rem;color:var(--muted);margin-top:10px}
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-weight:600}
+.links a{text-underline-offset:4px}
+.more{list-style:none;margin-top:36px}
+.more li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) auto;gap:8px 32px;padding:20px 0;border-top:1px solid var(--rule);align-items:baseline}
+.more h3{font-size:1.1rem}
+.more p{color:var(--muted);font-size:.98rem}
+.more .links{margin-top:0}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:36px}
+.cols h3{font-size:1.2rem;margin-bottom:12px}
+.cols ul{list-style:none}
+.cols li{padding:10px 0;border-top:1px solid var(--line)}
+.edu{margin-top:36px}
+.edu h3{font-size:1.2rem;margin:28px 0 8px}
+.edu div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.edu dt{color:var(--muted);font-size:.95rem}
+.edu dd{font-weight:500}
+.band{background:var(--ink);color:#fff;border-top:0}
+.band p{color:#c9d4e8;margin:12px 0 28px;max-width:52ch}
+.band .btn{background:var(--hl);border-color:var(--hl);color:var(--ink)}
+.band .btn:hover{background:transparent;color:var(--hl)}
+.band .btn.alt{background:transparent;border-color:#fff;color:#fff}
+.band .btn.alt:hover{background:#fff;color:var(--ink)}
+.band .cta{margin-top:0}
+footer{padding:28px 0;color:var(--muted);font-size:.9rem}
+@media(max-width:860px){.hero .wrap,.split,.work,.cols,.more li{grid-template-columns:1fr}.edu div{grid-template-columns:1fr;gap:2px}}
+@media(max-width:760px){.menu-btn{display:inline-flex}.site-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px 24px 16px}.site-nav.open{display:block}.site-nav ul{flex-direction:column;gap:0}.site-nav a{display:block;padding:12px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header>
+<div class="wrap bar">
+<a class="brand" href="#topo">dev<span>.Lucena</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav class="site-nav" id="menu" aria-label="Principal">
+<ul><li><a href="#sobre">Sobre</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#habilidades">Habilidades</a></li><li><a href="#formacao">Formação</a></li><li><a href="#contato">Contato</a></li></ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<section class="hero" id="topo">
+<div class="wrap">
+<div>
+<span class="avail">Disponível para vagas júnior</span>
+<h1>Ensinei por 12 anos. Agora construo interfaces para a web.</h1>
+<p class="lead">Sou Victor Lucena, desenvolvedor front-end júnior. Escrevo HTML, CSS e JavaScript, publico meus projetos na Vercel e deixo o código aberto no GitHub. Procuro minha primeira vaga na área.</p>
+<div class="cta"><a class="btn" href="#projetos">Ver projetos</a><a class="btn alt" href="./curriculo-victor-lucena.pdf" download="Curriculo-Victor-Lucena.pdf">Baixar currículo (PDF)</a></div>
+</div>
+<dl class="facts">
+<div><dt>Hoje</dt><dd>Front-end com HTML, CSS e JavaScript</dd></div>
+<div><dt>Aprendendo</dt><dd>React, TypeScript e Node.js</dd></div>
+<div><dt>Antes</dt><dd>12 anos como professor na rede estadual, incluindo ensino especial</dd></div>
+<div><dt>Projetos</dt><dd>11 publicados, todos com site no ar e código no GitHub</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="sobre">
+<div class="wrap split">
+<h2>Sobre mim</h2>
+<div class="prose">
+<p>Fui professor da rede estadual por 12 anos. Dei aula de matemática do 6º ao 9º ano e, para completar a carga horária, também de inglês, sociologia, biologia e filosofia. Em paralelo, atendi alunos autistas e com outras necessidades no ensino especial.</p>
+<p>Sou formado em Pedagogia e Gestão Pública e pós-graduado em Neuropsicopedagogia. A sala de aula me ensinou a explicar o complicado de um jeito simples e a ter paciência com quem aprende em outro ritmo. Quero levar isso para as interfaces que construo: claras, fáceis de usar e pensadas para quem está do outro lado da tela.</p>
+<p>Estudo programação há pouco mais de um ano, com cursos do IFRS e imersões. Agora busco minha primeira vaga júnior para aprender em equipe e avançar para React, TypeScript e Node.js.</p>
+</div>
+</div>
+</section>
+
+<section id="projetos">
+<div class="wrap">
+<h2>Projetos em destaque</h2>
+<p class="sub">Cinco projetos que mostram o que sei fazer: lógica no navegador, API, IA, integração com automação e back-end com banco de dados.</p>
+<div class="works">
+<article class="work">
+<div><h3>Seu Sorriso Importa: clínica odontológica com agendamento online</h3><p>Landing page completa de uma clínica odontológica fictícia, com agendamento online funcionando de ponta a ponta. O visitante escolhe o tratamento, o dia e um horário livre; o pedido é validado no servidor e gravado em um banco PostgreSQL, e o próprio banco impede dois pacientes no mesmo horário.</p><p>Tem as regras de uma clínica real: atendimento de segunda a sexta e sábado de manhã, agenda de até 90 dias, limite de 2 consultas futuras por telefone, consentimento LGPD, limite de requisições por IP, campo-isca contra robôs, cabeçalhos de segurança e 8 testes automatizados. Foi montado como modelo reutilizável: um script troca nome, WhatsApp, endereço e CRO para cada cliente.</p><span class="pronto">Pronto e funcional, aguardando os dados reais do cliente</span><p>Site, API e banco estão no ar e testados com agendamentos de teste. Falta apenas receber os dados reais do futuro cliente (nome, contatos, endereço, CRO, equipe e depoimentos), que entram em poucos minutos. Nesta versão ainda não há painel da recepção nem aviso automático por e-mail ou WhatsApp. Projeto de demonstração: textos, equipe e contatos são de exemplo.</p></div>
+<div><p class="learn"><strong>O que treinei:</strong> construir front-end e back-end juntos: API em Node.js e Express, banco PostgreSQL com Prisma, validação e segurança no servidor, testes automatizados e publicação em três serviços (Vercel, Render e Neon).</p><p class="stack">HTML, CSS, JavaScript, Node.js, Express, Prisma, PostgreSQL</p><p class="stack">A API usa plano gratuito: se o site estiver parado, a primeira carga dos horários pode levar até 1 minuto.</p><div class="links"><a href="https://clinica-sorriso-bice.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Seu Sorriso Importa">Abrir o site</a><a href="https://github.com/dev-Lucena/Clinica-Odontologica" target="_blank" rel="noopener" aria-label="Ver o código de Seu Sorriso Importa no GitHub">Ver o código</a></div></div>
+</article>
+<article class="work">
+<div><h3>Apple Watch Band Store</h3><p>Site com várias páginas em JavaScript puro, com carrinho salvo no localStorage e escolha de cor e tamanho. É uma loja de pulseiras de Apple Watch no estilo do site da Apple, com páginas por categoria.</p></div>
+<div><p class="learn"><strong>O que treinei:</strong> organizar um site com várias páginas e controlar o estado do carrinho.</p><p class="stack">HTML, CSS, JavaScript, localStorage</p><div class="links"><a href="https://apple-store-khaki.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Apple Watch Band Store">Abrir o site</a><a href="https://github.com/dev-Lucena/apple-store" target="_blank" rel="noopener" aria-label="Ver o código de Apple Watch Band Store no GitHub">Ver o código</a></div></div>
+</article>
+<article class="work">
+<div><h3>Clima no Mundo</h3><p>Consumo da API pública Open-Meteo com JavaScript puro, sem chave de acesso. Mostra as informações meteorológicas da cidade pesquisada.</p></div>
+<div><p class="learn"><strong>O que treinei:</strong> buscar dados de uma API real e atualizar a tela com a resposta.</p><p class="stack">HTML, CSS, JavaScript, API REST</p><div class="links"><a href="https://clima-no-mundo.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Clima no Mundo">Abrir o site</a><a href="https://github.com/dev-Lucena/Clima-no-mundo" target="_blank" rel="noopener" aria-label="Ver o código de Clima no Mundo no GitHub">Ver o código</a></div></div>
+</article>
+<article class="work">
+<div><h3>My Cal IA</h3><p>Integração com IA (Puter.js) para analisar imagens direto no navegador, sem servidor próprio. Você tira uma foto do prato ou envia uma imagem e recebe a estimativa de calorias e macronutrientes.</p></div>
+<div><p class="learn"><strong>O que treinei:</strong> entrada por câmera ou upload de imagem e uso de IA a partir do front-end.</p><p class="stack">HTML, CSS, JavaScript, Puter.js</p><div class="links"><a href="https://my-cal-ia.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site My Cal IA">Abrir o site</a><a href="https://github.com/dev-Lucena/My-Cal-IA" target="_blank" rel="noopener" aria-label="Ver o código de My Cal IA no GitHub">Ver o código</a></div></div>
+</article>
+<article class="work">
+<div><h3>Fundo Mágico</h3><p>Front-end ligado a um fluxo no n8n que usa IA (Google Gemini) para gerar código CSS. Você descreve o fundo que quer e a página aplica o resultado na hora.</p></div>
+<div><p class="learn"><strong>O que treinei:</strong> conectar página, webhook e IA, e depurar um fluxo que tinha parado de funcionar. O projeto nasceu em uma imersão e eu refiz a integração.</p><p class="stack">HTML, CSS, JavaScript, n8n, Gemini</p><div class="links"><a href="https://fundo-magico-chi.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Fundo Mágico">Abrir o site</a><a href="https://github.com/dev-Lucena/Fundo-Magico" target="_blank" rel="noopener" aria-label="Ver o código de Fundo Mágico no GitHub">Ver o código</a></div></div>
+</article>
+</div>
+
+<h2 style="margin-top:64px">Outros projetos</h2>
+<ul class="more">
+<li><h3>Foto Read IA</h3><p>IA (Puter.js) que lê fotos de comprovantes de pagamento e contabiliza os gastos. HTML, CSS e JavaScript.</p><div class="links"><a href="https://foto-read-ia.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Foto Read IA">Site</a><a href="https://github.com/dev-Lucena/Foto-Read-IA" target="_blank" rel="noopener" aria-label="Ver o código de Foto Read IA no GitHub">Código</a></div></li>
+<li><h3>Barbearia Navalha</h3><p>Landing page de barbearia com chat em React (via CDN, sem etapa de build) que leva a conversa para o WhatsApp.</p><div class="links"><a href="https://barbearia-navalha-topaz.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Barbearia Navalha">Site</a><a href="https://github.com/dev-Lucena/Barbearia-Navalha" target="_blank" rel="noopener" aria-label="Ver o código de Barbearia Navalha no GitHub">Código</a></div></li>
+<li><h3>MARCA, estúdio de tatuagem</h3><p>Landing page de um estúdio fictício, feita em React sem etapa de build, com chat para WhatsApp.</p><div class="links"><a href="https://studio-lucena.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site MARCA, estúdio de tatuagem">Site</a><a href="https://github.com/dev-Lucena/Studio-Lucena" target="_blank" rel="noopener" aria-label="Ver o código de MARCA no GitHub">Código</a></div></li>
+<li><h3>GTA VI</h3><p>Clone da página oficial do jogo, com vídeo de capa e animações. Treino de reproduzir um layout real com fidelidade.</p><div class="links"><a href="https://gta-vi-lac-three.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site GTA VI">Site</a><a href="https://github.com/dev-Lucena/GTA-VI" target="_blank" rel="noopener" aria-label="Ver o código de GTA VI no GitHub">Código</a></div></li>
+<li><h3>Login NU</h3><p>Tela de login inspirada no Nubank, com validação dos campos e layout responsivo.</p><div class="links"><a href="https://login-nu-inky.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Login NU">Site</a><a href="https://github.com/dev-Lucena/Login" target="_blank" rel="noopener" aria-label="Ver o código de Login NU no GitHub">Código</a></div></li>
+<li><h3>Planet Bucks</h3><p>Meu primeiro projeto: landing page inspirada no universo Starbucks, em HTML, CSS e JavaScript. Mantive como foi feito, para mostrar o ponto de partida.</p><div class="links"><a href="https://planet-bucks.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir o site Planet Bucks">Site</a><a href="https://github.com/dev-Lucena/Planet-Bucks" target="_blank" rel="noopener" aria-label="Ver o código de Planet Bucks no GitHub">Código</a></div></li>
+</ul>
+</div>
+</section>
+
+<section id="habilidades">
+<div class="wrap">
+<h2>Habilidades</h2>
+<p class="sub">O que já uso nos meus projetos e o que estou aprendendo agora.</p>
+<div class="cols">
+<div><h3>Uso nos meus projetos</h3><ul><li>HTML5, CSS3 e JavaScript (ES6+)</li><li>DOM, eventos, formulários e validação</li><li>Layouts responsivos, mobile-first</li><li>localStorage e consumo de API</li><li>Integração com IA (Puter.js) e n8n</li><li>Git, GitHub, VS Code e deploy na Vercel</li></ul></div>
+<div><h3>Estou aprendendo</h3><ul><li>React (já usei via CDN em dois projetos)</li><li>TypeScript</li><li>Node.js</li><li>Depois: Python e SQL</li></ul></div>
+</div>
+</div>
+</section>
+
+<section id="formacao">
+<div class="wrap">
+<h2>Formação</h2>
+<dl class="edu">
+<h3>Acadêmica</h3>
+<div><dt>Graduação</dt><dd>Pedagogia</dd></div>
+<div><dt>Graduação</dt><dd>Gestão Pública</dd></div>
+<div><dt>Pós-graduação</dt><dd>Neuropsicopedagogia</dd></div>
+<h3>Programação</h3>
+<div><dt>2026, 40 horas</dt><dd>JavaScript: Fundamentos para Desenvolvimento Web Interativo, IFRS</dd></div>
+<div><dt>2025, 200 horas</dt><dd>Programador Web, IFRS</dd></div>
+<div><dt>2025, 10 horas</dt><dd>Semana Do Zero ao Programador Contratado, DevEmDobro</dd></div>
+<div><dt>2025</dt><dd>Programador em 72H: O Desafio, DevClub</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="band" id="contato">
+<div class="wrap">
+<h2>Vamos conversar?</h2>
+<p>Busco minha primeira vaga como desenvolvedor front-end júnior e também topo colaborar em projetos web.</p>
+<div class="cta"><a class="btn" href="mailto:vmkt2026@gmail.com">Enviar e-mail</a><a class="btn alt" href="https://www.linkedin.com/in/dev-lucena/" target="_blank" rel="noopener">LinkedIn</a><a class="btn alt" href="https://github.com/dev-Lucena" target="_blank" rel="noopener">GitHub</a><a class="btn alt" href="./curriculo-victor-lucena.pdf" download="Curriculo-Victor-Lucena.pdf">Baixar currículo</a></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Victor Lucena dos Santos</div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+var b=document.querySelector('.menu-btn'),n=document.getElementById('menu');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+</script>
+</body>
+</html>
